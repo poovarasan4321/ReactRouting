@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
 import Home from "./pages/Home"
 import NavBar from './Components/NavBar'
 import About from './pages/About'
@@ -7,26 +7,45 @@ import Contact from './pages/Contact'
 import Services from './pages/Services'
 import Login from './Components/Login'
 import Layout from './layout/Layout'
+// import myRoutes from './routes/routes'
+import myRoutes from './routes/routes'
 
 const App = () => {
   return (
+    <>
+    
+    {/* // <BrowserRouter> */}
+    {/* //   <Routes> */}
 
-    <BrowserRouter>
-      <Routes>
+    {/* //     parent and children  we can use layout to focus to study this topic */}
+    {/* //     <Route path='/' element={<Layout />}> */}
+    {/* //       child rote  */}
+    {/* //       if we display by default means use path same  */}
+    {/* //       index true means sames path as parent  provide child  */}
 
-        {/* parent and children  we can use layout to focus to study this topic*/}
-        <Route path='/' element={<Layout/>}>
-          {/* child rote  */}
-          <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='*' element={<h2>Page Not Founded</h2>} />
-        </Route>
+    {/* //       <Route index={true} element={<Home />} /> */}
+    {/* //       <Route path='/about' element={<About />} /> */}
+    {/* //       <Route path='/services' element={<Services />} /> */}
+    {/* //       <Route path='/contact' element={<Contact />} /> */}
+    {/* //       <Route path='/login' element={<Login />} /> */}
+    {/* //       <Route path='*' element={<h2>Page Not Founded</h2>} /> */}
+    {/* //     </Route> */}
 
-      </Routes>
-    </BrowserRouter>
+    {/* //   </Routes> */}
+    {/* // </BrowserRouter> */}
+
+
+
+
+    {/* provide the routes */}
+
+    <RouterProvider router={myRoutes}/>
+
+
+
+    </>
+
+
   )
 }
 
