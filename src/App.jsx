@@ -11,6 +11,9 @@ import Layout from './layout/Layout'
 import myRoutes from './routes/routes'
 import Parent from './PerformanceOptimizationTechniques/Parent'
 import UseMemoHook from './PerformanceOptimizationTechniques/UseMemoHook'
+import CallBackParent from './PerformanceOptimizationTechniques/CallBackParent'
+import MainComponent from './PerformanceOptimizationTechniques/MainComponent'
+import Counter from './UseReducerHook/Counter'
 
 const App = () => {
   return (
@@ -46,7 +49,9 @@ const App = () => {
 
       {/* <Parent /> */}
       {/* <UseMemoHook /> */}
-      
+      {/* <CallBackParent/> */}
+      {/* <MainComponent/> */}
+      <Counter />
     </>
 
 
